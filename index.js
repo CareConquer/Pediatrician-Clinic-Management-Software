@@ -77,7 +77,31 @@ app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 // Allow requests from the frontend origin (http://localhost:3000)
 app.use(cors({ origin: 'http://localhost:3000' }));
-app.use("/assets", express.static(path.join(__dirname, 'public/assets')));
+// app.use("/assets", express.static(path.join(__dirname, 'public/assets')));
+
+app.use(express.static(path.join(__dirname, './build')));
+
+const storage = multer.diskStorage({
+    destination:function(req, file, cb){
+        cb(null, "public/assests");
+    },
+    filename:function(req, file, cb){
+        cb(null,file.originalname)
+    }
+});
+const upload = multer({storage});
+
+
+//FILE  STORAGE CONFIG
+const storage = multer.diskStorage({
+    destination:function(req, file, cb){
+        cb(null, "public/assests");
+    },
+    filename:function(req, file, cb){
+        cb(null,file.originalname)
+    }
+});
+const upload = multer({storage});
 
 
 //FILE  STORAGE CONFIG
@@ -315,7 +339,9 @@ app.post("/auth/find-pdf/:patientId", async (req, res) => {
 });
 
 
-
+app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname,'./build/index.html'))
+})
 
 // MONGOOSE SETUP
 const PORT = process.env.PORT || 6001;
