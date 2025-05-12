@@ -1067,7 +1067,7 @@ const generatePDF = async (data, id) => {
 
     // Generate the QR code
     // const qrCodeUrl = `https://memocares.com/labReports/${id}.pdf`;
-    const qrCodeUrl = ``;
+    const qrCodeUrl = '';
     const qrCodeData = await QRCode.toDataURL(qrCodeUrl);
 
      // Generate the barcode
