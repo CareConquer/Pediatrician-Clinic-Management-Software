@@ -1066,7 +1066,8 @@ const generatePDF = async (data, id) => {
     const labImageBase64 = labImageBuffer.toString('base64');
 
     // Generate the QR code
-    const qrCodeUrl = `https://memocares.com/labReports/${id}.pdf`;
+    // const qrCodeUrl = `https://memocares.com/labReports/${id}.pdf`;
+    const qrCodeUrl = ``;
     const qrCodeData = await QRCode.toDataURL(qrCodeUrl);
 
      // Generate the barcode
@@ -3125,7 +3126,8 @@ const WHgeneratePDF = async (data, id) => {
     const footerImageBase64 = footerImageBuffer.toString('base64');
 
     // Generate the QR code
-    const qrCodeUrl = `https://memocares.com/labDemo/store/downloads/qrlab-result/38`;
+    // const qrCodeUrl = `https://memocares.com/labDemo/store/downloads/qrlab-result/38`;
+    const qrCodeUrl = '';
     const qrCodeData = await QRCode.toDataURL(qrCodeUrl);
 
     const getPatientDetails = () => `
@@ -3487,7 +3489,9 @@ const CulturegeneratePDF = async (data, id) => {
     const footerImageBase64 = footerImageBuffer.toString('base64');
 
     // Generate the QR code
-    const qrCodeUrl = `https://memocares.com/labDemo/store/downloads/qrlab-result/38`;
+    // const qrCodeUrl = `https://memocares.com/labDemo/store/downloads/qrlab-result/3`;
+    const qrCodeUrl = '';
+
     const qrCodeData = await QRCode.toDataURL(qrCodeUrl);
 
     const getPatientDetails = () => `
@@ -3673,7 +3677,8 @@ const NHculturegeneratePDF = async (data, id) => {
     const labImageBase64 = labImageBuffer.toString('base64');
 
     // Generate the QR code
-    const qrCodeUrl = `https://memocares.com/labDemo/store/downloads/qrlab-result/38`;
+    // const qrCodeUrl = `https://memocares.com/labDemo/store/downloads/qrlab-result/38`;
+    const qrCodeUrl = '';
     const qrCodeData = await QRCode.toDataURL(qrCodeUrl);
 
     const getPatientDetails = () => `
