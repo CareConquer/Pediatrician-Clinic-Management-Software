@@ -1094,7 +1094,7 @@ const generatePDF = async (data, id) => {
             <td colspan="1">
                 Patient Name: <strong>${data.data.pSal}. ${data.data.pName}</strong>
                 <div style="margin-bottom: 10px;"></div>
-                Sex / Age: <strong>${data.data.pGender} / ${data.data.pAge}</strong>
+                Sex / Age: <strong>${data.data.pGender} / ${new Date(data.data.pAge).toLocaleDateString('en-IN')}</strong>
                 <div style="margin-bottom: 10px;"></div>
                 Referred By: <strong>${data.data.drName}</strong>
                 <div style="margin-bottom: 10px;"></div>
