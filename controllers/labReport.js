@@ -1067,26 +1067,26 @@ const generatePDF = async (data, id) => {
 
     // Generate the QR code
     // const qrCodeUrl = `https://memocares.com/labReports/${id}.pdf`;
-    const qrCodeUrl = '';
-    const qrCodeData = await QRCode.toDataURL(qrCodeUrl);
+    // const qrCodeUrl = '';
+    // const qrCodeData = await QRCode.toDataURL(qrCodeUrl);
 
-     // Generate the barcode
-     const barcodeData = await new Promise((resolve, reject) => {
-        BwipJs.toBuffer({
-            bcid: 'code128',       // Barcode type
-            text: `${data.data.pSal} ${data.data.pName} ${data.data.pGender} ${data.data.pAge}`, // Text to encode
-            scale: 3,              // 3x scaling factor
-            height: 10,            // Bar height, in millimeters
-            includetext: false,    // Do not show human-readable text
-            textxalign: 'center',  // Align text to center (won't matter as text is not included)
-        }, (err, png) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(`data:image/png;base64,${png.toString('base64')}`);
-            }
-        });
-    });
+    //  // Generate the barcode
+    //  const barcodeData = await new Promise((resolve, reject) => {
+    //     BwipJs.toBuffer({
+    //         bcid: 'code128',       // Barcode type
+    //         text: `${data.data.pSal} ${data.data.pName} ${data.data.pGender} ${data.data.pAge}`, // Text to encode
+    //         scale: 3,              // 3x scaling factor
+    //         height: 10,            // Bar height, in millimeters
+    //         includetext: false,    // Do not show human-readable text
+    //         textxalign: 'center',  // Align text to center (won't matter as text is not included)
+    //     }, (err, png) => {
+    //         if (err) {
+    //             reject(err);
+    //         } else {
+    //             resolve(`data:image/png;base64,${png.toString('base64')}`);
+    //         }
+    //     });
+    // });
     
 
     const getPatientDetails = () => `
@@ -1366,7 +1366,6 @@ const generatePDF = async (data, id) => {
                 <p><strong>Lab Technician</strong></p>
             </div>
             <div class="qr-code">
-              <img src="${qrCodeData}" alt="QR Code">
            </div>
             <div>
                 <img src="data:image/png;base64,${doctorImageBase64}" alt="Doctor Sign">
