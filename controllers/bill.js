@@ -730,7 +730,7 @@ const generateBillPDF = async (data) => {
         </tr>
         <tr>
             <td>Sex / Age:</td>
-            <td>${data.data.pGender} / ${data.data.pAge}</td>
+            <td>${data.data.pGender} /  ${new Date(data.data.pAge).toLocaleDateString('en-IN')}</td>
         </tr>
         <tr>
             <td>Referred By:</td>
