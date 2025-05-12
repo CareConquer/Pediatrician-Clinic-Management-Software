@@ -1301,7 +1301,6 @@ const generatePDF = async (data, id) => {
             </td>
             <td colspan="1">
                  <div class="barcode">
-                     <img src="${barcodeData}" alt="Barcode" />
                  </div>
             </td>
             <td colspan="1">    
