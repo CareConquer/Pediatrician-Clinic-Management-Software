@@ -81,15 +81,6 @@ app.use(cors({ origin: 'http://localhost:3000' }));
 
 app.use(express.static(path.join(__dirname, './build')));
 
-const storage = multer.diskStorage({
-    destination:function(req, file, cb){
-        cb(null, "public/assests");
-    },
-    filename:function(req, file, cb){
-        cb(null,file.originalname)
-    }
-});
-const upload = multer({storage});
 
 
 //FILE  STORAGE CONFIG
