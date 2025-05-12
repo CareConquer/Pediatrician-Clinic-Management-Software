@@ -84,15 +84,15 @@ app.use(express.static(path.join(__dirname, './build')));
 
 
 //FILE  STORAGE CONFIG
-const storage = multer.diskStorage({
-    destination:function(req, file, cb){
-        cb(null, "public/assests");
-    },
-    filename:function(req, file, cb){
-        cb(null,file.originalname)
-    }
-});
-const upload = multer({storage});
+// const storage = multer.diskStorage({
+//     destination:function(req, file, cb){
+//         cb(null, "public/assests");
+//     },
+//     filename:function(req, file, cb){
+//         cb(null,file.originalname)
+//     }
+// });
+// const upload = multer({storage});
 
 
 //FILE  STORAGE CONFIG
