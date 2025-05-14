@@ -714,11 +714,11 @@ const generateBillPDF = async (data) => {
 
     const billDetailsHTML = `
             <div style="text-align: center;">
-            <span style="font-weight: bold; font-size: 30px;">CRESCENT TECHNOSOFT</span> <br> <br>
-            <span>46/4, Hosur Rd, Kudlu Gate, Krishna Reddy Industrial Area, H.S</span><br>
-            <span>, R Extension, Bengaluru, Karnataka 560068</span><br>
-            <span>Email: crescenttechnosoftsonline@gmail.com</span><br>
-            <span>PH: 99449 92460 </span>
+            <span style="font-weight: bold; font-size: 30px;">Care Conquer</span> <br> <br>
+            <span>Near Solapur Road behind SP Office</span><br>
+            <span>, Bijapur, Karnataka 586101</span><br>
+            <span>Email: careconqueronline@gmail.com</span><br>
+            <span>PH: 72040 83231 </span>
             <h5 style="text-align:center">BILL RECEIPT</h5>
             <hr style="border-top: 1px solid #000; margin: 0;">
         </div>
