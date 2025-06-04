@@ -1193,10 +1193,10 @@ export const printPrescriptions = async (req, res) => {
         // Define the HTML content with formatted bill date, vitals, diagnosis, medicine details, and investigation
         const htmlContent = `
         <div style="text-align: center;">
-            <span style="font-weight: bold; font-size: 30px;">Care Conquer</span> <br> <br>
+            <span style="font-weight: bold; font-size: 30px;">Clinic Demo</span> <br> <br>
             <span>46/4, Hosur Rd, Kudlu Gate, Krishna Reddy Industrial Area, H.S</span><br>
             <span>, R Extension, Bengaluru, Karnataka 560068</span><br>
-            <span>Email: careconqueronline@gmail.com</span><br>
+            <span>Email: demo@gmail.com</span><br>
             <span>PH: 8574968523 </span>
             <h5 style="text-align:center">PRESCRIPTION</h5>
             <hr style="border-top: 1px solid #000; margin: 0;">
